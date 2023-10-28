@@ -35,21 +35,80 @@ const Clothes = [
     id: 6,
     image: "https://th.bing.com/th/id/R.cb0368788bd764aef6b0079d7c045c8e?rik=mOLtSL%2bkWb8dOg&pid=ImgRaw&r=0",
     title: "dress 6"
+  },
+  {
+    id: 6,
+    image: "https://th.bing.com/th/id/R.cb0368788bd764aef6b0079d7c045c8e?rik=mOLtSL%2bkWb8dOg&pid=ImgRaw&r=0",
+    title: "dress 1",
+    pattern: "dress"
+  },
+  {
+    id: 7,
+    image: "https://th.bing.com/th/id/OIP.-86QJp-4-ofTKnGaTJm3vQHaHa?pid=ImgDet&rs=1",
+    title: "tshirt",
+
+    pattern: "tshirt"
+  },
+  {
+    id: 8,
+    image: "https://th.bing.com/th/id/R.cb0368788bd764aef6b0079d7c045c8e?rik=mOLtSL%2bkWb8dOg&pid=ImgRaw&r=0",
+    title: "dress 3",
+    pattern: "dress"
+  },
+  {
+    id: 9,
+    image: "https://th.bing.com/th/id/R.0ac6004bf3e4e91f945102928111219c?rik=fYquRnDl9NI67A&riu=http%3a%2f%2fwww.elizabethcustomskirts.com%2fwp-content%2fuploads%2f2014%2f07%2fgray-wool-blen-pleated-skirt.jpg&ehk=WqrpyL7AxDJe0H7xsgW7zgBTTX2VmyPKFUhWjv%2bdseE%3d&risl=&pid=ImgRaw&r=0",
+    title: "skirt 1",
+    pattern: "skirt"
+  },
+  {
+    id: 10,
+    image: "https://th.bing.com/th/id/OIP.HBnomO2VfsOmiSFFTlIqGAHaJr?pid=ImgDet&rs=1",
+    title: "skirt 2",
+    pattern: "skirt"
+  },
+  {
+    id: 10,
+    image: "https://th.bing.com/th/id/OIP.UZpAFv9FCZUYJ8NJ3JR7YQHaJ4?pid=ImgDet&rs=1",
+    title: "denim",
+    pattern: "denim"
   }
 ]
 export default function Product({ params }: any) {
   const product = Clothes[params.id]
   return (
-    <main className="flex">
-      <div className="w-[50vw] flex justify-center">
-        <img
-          className="w-[80%]"
-          src={product.image}
-        />
-      </div>
-      <div className="w-[50vw] p-20 h-screen center items-center flex flex-col gap-8">
-        <h1 className="self-start font-normal text-3xl">{product.title}</h1>
+    <main className="flex  mt-5 max-md:flex-col ">
+      <div className="w-[50vw] flex justify-center gap-4 max-md:w-full max-lg:w-[60vw]">
+        <div className="flex flex-col gap-4 h-[518px] overflow-hidden ">
+          <img
+            className="w-[77px] h-[119px] "
+            src={product.image}
+          />
+          <img
 
+            className="w-[77px] h-[119px]"
+            src={product.image}
+          />
+          <img
+
+            className="w-[77px] h-[119px]"
+            src={product.image}
+          />
+          <img
+
+            className="w-[77px] h-[119px]"
+            src={product.image}
+          />
+        </div>
+        <div>
+          <img
+            className="h-[518px] w-[418px]"
+            src={product.image}
+          />
+        </div>
+      </div>
+      <div className="w-[50vw] p-5 mx-20 h-screen flex flex-col gap-8 max-md:w-full max-md:mx-5 max-lg:w-[40vw]">
+        <h1 className="self-start font-normal text-3xl">{product.title}</h1>
         <h1 className="self-start font-normal text-3xl"> $</h1>
         <p>Lorem ipsum dolor sit amet consectetur. Proin massa pulvinar scelerisque ipsum est. Quis tortor amet porttitor lectus sem donec a nisi. Sed faucibus sit amet iaculis ac. Et aliquet elementum dignissim eu mattis mauris.</p>
         <DropdownMenu>
@@ -59,7 +118,7 @@ export default function Product({ params }: any) {
               <ChevronDown />
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="border-black border-solid border w-full  justify-between items-center px-5 rounded-[0px]">
+          <DropdownMenuContent className="border-black border-solid border relative w-full  justify-between items-center px-5 rounded-[0px]">
             <DropdownMenuItem >Option 1</DropdownMenuItem>
             <DropdownMenuItem>Option 2</DropdownMenuItem>
             <DropdownMenuItem>Option 3</DropdownMenuItem>

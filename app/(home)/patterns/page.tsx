@@ -33,7 +33,7 @@ export default function Patterns() {
               <Link
                 key={item.title}
                 className={buttonVariants({ variant: "link" })}
-                href={`/apparel?pattern=${item.href}`}>{item.title}
+                href={`/patterns/${item.href}`}>{item.title}
               </Link>
             )
           })

@@ -27,29 +27,27 @@ const Clothes = [
     id: 5,
     image: "https://th.bing.com/th/id/R.cb0368788bd764aef6b0079d7c045c8e?rik=mOLtSL%2bkWb8dOg&pid=ImgRaw&r=0",
     title: "dress 5"
-  },
-  {
-    id: 6,
-    image: "https://th.bing.com/th/id/R.cb0368788bd764aef6b0079d7c045c8e?rik=mOLtSL%2bkWb8dOg&pid=ImgRaw&r=0",
-    title: "dress 6"
   }
 ]
 export default function Apparel() {
   return (
     <main>
       <Filters />
-      <div className="flex flex-wrap gap-4 ">
-        {Clothes.map((item) => {
-          return (
 
+      <div className="grid grid-rows-4 grid-flow-col gap-4 max-h-[920px]">
+        {Clothes.map((item, index) => {
+          return (
             <Link
+              className={cn(index != 4 ? "row-span-2 col-span-2" : "row-span-4 col-span-3", "overflow-hidden")}
               key={item.id}
               href={`product/${item.id}`}>
-              <img src={item.image} width={328} height={456} />
+              <img src={item.image} />
             </Link>
 
           )
         })}
+
+
       </div>
     </main>
   )
