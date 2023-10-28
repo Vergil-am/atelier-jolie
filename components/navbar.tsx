@@ -30,8 +30,6 @@ export default function Navbar() {
               className={
                 cn(
                   buttonVariants({ variant: "link" }),
-                  window != undefined ?
-                    window.location.pathname === item.href ? "underline" : "" : ""
                 )
               }
             >{item.title}</Link>
