@@ -49,7 +49,9 @@ export default function Patterns({
     <div className="flex flex-wrap ml-44 gap-6">
       {clothes.map(item => {
         return (
-          <Link href={`/product/${item.id}`}>
+          <Link
+            key={item.id}
+            href={`/product/${item.id}`}>
             <img src={item.image}
               width={338.34}
               height={486.36}

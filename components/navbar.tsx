@@ -29,7 +29,8 @@ export default function Navbar() {
               href={item.href}
               className={
                 cn(
-                  buttonVariants({ variant: "link" })
+                  buttonVariants({ variant: "link" }),
+                  window.location.pathname === item.href ? "underline" : ""
                 )
               }
             >{item.title}</Link>
