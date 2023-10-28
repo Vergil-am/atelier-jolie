@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input'
 import { useRef } from 'react'
 import { useRouter } from 'next/navigation'
 
-export default function() {
+export default function Search() {
   const InputRef = useRef<HTMLInputElement | null>(null)
   const router = useRouter()
 
