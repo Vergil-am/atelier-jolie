@@ -1,4 +1,5 @@
 import Filters from "@/components/filters"
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 const Clothes = [
@@ -37,15 +38,21 @@ export default function Apparel() {
   return (
     <main>
       <Filters />
-      <div className="flex flex-wrap gap-2">
-        {Clothes.map(item => {
+      <div className="flex flex-wrap gap-4 ">
+        {Clothes.map((item) => {
           return (
-            <Link key={item.id} href={`product/${item.id}`}>
+
+            <Link
+              key={item.id}
+              href={`product/${item.id}`}>
               <img src={item.image} width={328} height={456} />
             </Link>
+
           )
         })}
       </div>
     </main>
   )
 }
+
+
