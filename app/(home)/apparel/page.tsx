@@ -40,7 +40,7 @@ export default function Apparel() {
       <div className="flex flex-wrap gap-2">
         {Clothes.map(item => {
           return (
-            <Link href={`product/${item.id}`}>
+            <Link key={item.id} href={`product/${item.id}`}>
               <img src={item.image} width={328} height={456} />
             </Link>
           )
