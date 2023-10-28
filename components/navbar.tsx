@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import SideMenu from "./sideMenu";
 
 
 const Items = [
@@ -37,51 +37,9 @@ export default function Navbar() {
           )
         })}
       </nav>
-      <MenuButton />
+      <SideMenu />
     </div>
   )
 }
 
-function MenuButton() {
-  const [pressed, setPressed] = useState(false)
-  return (
-    <Button
-      variant="ghost"
-      onClick={() => setPressed(!pressed)}
-    >
-      {
-        pressed ?
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="34"
-            height="25"
-            fill="none"
-            viewBox="0 0 42 25"
-          >
-            <path
-              stroke="#000"
-              strokeLinecap="round"
-              strokeWidth="1.846"
-              d="M10.154 1.846L32.308 24M10.154 24L32.308 1.846"
-            ></path>
-          </svg>
-          :
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="34"
-            height="14"
-            fill="none"
-            viewBox="0 0 34 14"
-          >
-            <path
-              stroke="#000"
-              strokeLinecap="round"
-              strokeWidth="1.846"
-              d="M1.461 1h31M1.461 13h31"
-            ></path>
-          </svg>
-      }
 
-    </Button>
-  )
-}
