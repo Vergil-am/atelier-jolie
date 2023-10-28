@@ -25,6 +25,7 @@ export default function Navbar() {
         {Items.map(item => {
           return (
             <Link
+              key={item.title}
               href={item.href}
               className={
                 cn(

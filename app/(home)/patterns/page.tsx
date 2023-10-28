@@ -1,5 +1,5 @@
+import Search from "@/components/search"
 import { buttonVariants } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import Link from "next/link"
 const Items = [
   {
@@ -31,16 +31,15 @@ export default function Patterns() {
           Items.map(item => {
             return (
               <Link
+                key={item.title}
                 className={buttonVariants({ variant: "link" })}
-                href={item.href}>{item.title}
+                href={`/apparel?pattern=${item.href}`}>{item.title}
               </Link>
             )
           })
         }
       </div>
-      <Input className="bg-transparent  w-52 text-center border-b-[#A0A0A0] border-t-transparent border-x-transparent mt-32"
-        placeholder="Search"
-      />
+      <Search />
     </div>
 
   )
