@@ -42,7 +42,10 @@ export default function Navbar() {
           )
         })}
       </nav>
-      <SideMenu />
+      <div className="flex justify-between items-center gap-6 mr-10">
+        <p className="text-black font-medium text-xs ">Cart</p>
+        <SideMenu />
+      </div>
     </div>
   )
 }

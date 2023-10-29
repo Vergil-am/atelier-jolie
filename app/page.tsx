@@ -8,13 +8,13 @@ export default function Home() {
       <main className="min-h-[92vh] max-h-screen bg-home-bg bg-no-repeat bg-cover">
         <Link
           href=''
-          className="absolute bottom-20 left-[45%] bg-black text-white py-2 px-[101px]"
+          className="absolute bottom-20 left-[45%] bg-black text-white py-2 px-[101px] max-sm:left-1 max-sm:px-6"
         >
           BOOK AN APPOINTMENT
         </Link>
         <Link
           href='/apparel'
-          className="bottom-20 right-6 absolute bg-black text-white py-2 px-[101px]"
+          className="bottom-20 right-6 absolute bg-black text-white py-2 px-[101px]  max-sm:px-6"
         >
           Shop
         </Link>
