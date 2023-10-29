@@ -25,7 +25,7 @@ export default function Navbar() {
           width={87}
           height={44}
         /></Link>
-      <nav>
+      <nav className="flex">
         {Items.map(item => {
           return (
             <Link
@@ -42,7 +42,7 @@ export default function Navbar() {
           )
         })}
       </nav>
-      <div className="flex justify-between items-center gap-6 mr-10">
+      <div className="flex justify-between items-center gap-6 mr-10 max-sm:mr-2">
         <p className="text-black font-medium text-xs ">Cart</p>
         <SideMenu />
       </div>
